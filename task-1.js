@@ -30,7 +30,7 @@ console.log(`За місяць я навчатимусь ${hoursPerMonth} год
 let userName = "Maria";
 userName = "Anna";
 
-const score = "100" + 50;
+const score = Number("100") + 50;
 console.log(score);
 
 let isActive = true;
@@ -60,13 +60,15 @@ console.log(`Шукаю роботу: ${user.isLookingForJob}`);
 
 const meBirthdayDay = 10;
 const meBirthdayMonth = 1;
+
 const currentDay = 1;
 const currentMonth = 5;
+
 const daysInMonth = 30;
 
-const daysUntilBirthday =
-  ((meBirthdayMonth - currentMonth + 12) % 12) * daysInMonth +
-  (meBirthdayDay - currentDay);
-console.log(
-  `До мого дня народження залишилось приблизно ${daysUntilBirthday} днів`,
-);
+let monthLeft = meBirthdayMonth - currentMonth;
+if (monthLeft < 0) { monthLeft += 12 }
+
+const daysLeft = monthLeft * daysInMonth + (meBirthdayDay - currentDay);
+
+console.log(`До мого дня народження залишилось приблизно ${daysLeft} днів`);
