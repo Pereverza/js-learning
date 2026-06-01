@@ -46,6 +46,7 @@ const user = {
   isLookingForJob: true,
 };
 
+
 console.log("=== ПРОФІЛЬ РОЗРОБНИКА ===");
 console.log(`Ім'я: ${user.name}`);
 console.log(`Вік: ${user.age}`);
